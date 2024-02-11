@@ -1,1 +1,1 @@
-# DSC180B
+# DSC180B-Popularity Bias in Netflix dataset
