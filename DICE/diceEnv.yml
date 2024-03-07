@@ -1,0 +1,7 @@
+name: diceEnv
+channels:
+  - conda-forge
+dependencies:
+  - dgl
+  - faiss-gpu
+prefix: /home/zgong/.conda/envs/diceEnv
