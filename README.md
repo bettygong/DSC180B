@@ -70,6 +70,6 @@ Installed packages in `diceEnv`:\
 After version control, you then can run the code in `diceEnv`. (Simply activate the environment by `source activate diceEnv`)
 
 ### Command/Reproduce
-Change directory path in (app.py)[DICE/src/app.py] and [const.py](DICE/src/config/const.py). (Direct to DICE folder. For instance, my DSMLP path is  `/home/zgong/private/DICE`.)\
+Change directory path in [app.py](DICE/src/app.py) and [const.py](DICE/src/config/const.py). (Direct to DICE folder. For instance, my DSMLP path is  `/home/zgong/private/DICE`.)\
 To train model, run `nohup python app.py --flagfile ./config/nf_dice.cfg >output.txt &`.\
 
