@@ -39,11 +39,10 @@ others: (you can read help, or "python xxx.py --help")\
 --lr: learning rate\
 --save_dir: path to find the file of the saved model 
 
-## Command (To produce results)
-Note: Before doing anything else, please cd to PDA folder.\
-TODO---
+### Command/Reproduce
+Download Netflix PD/PDA model from [nf_pda_model](https://drive.google.com/drive/folders/1DB2pX-xUF7N3xT6izILwnhkUkKV6eitS?usp=sharing).
+To reproduce result, run `python -u MF/simple_reproduce.py --dataset netflix_movie --epoch 100 --save_flag 0 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train s_condition --test s_condtion --saveID xxx --cuda 1 --regs 1e-2 --valid_set valid --pop_exp 0.1 --save_dir save_model/ --Ks [20,50]`\
 
-### PD/PDA
 To train model, run `nohup python -u MF/train_new_api.py --dataset netflix_movie --epoch 1000 --save_flag 1 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train s_condition --test s_condition --saveID s_condition --cuda 1 --regs 1e-2 --valid_set valid --pop_exp 0.15  --save_dir save_model/ > output4.out &`. Here popularity is set to be 0.15\
 Note: I'm using DSMLP to run the code so the `save_dir` path includes my username. If you want to run it on DSMLP as well, please modify it to your username. If you run on the local computer, you should use the path leading to the PDA folder.
 
