@@ -47,4 +47,29 @@ To train model, run `nohup python -u MF/train_new_api.py --dataset netflix_movie
 Note: I'm using DSMLP to run the code so the `save_dir` path includes my username. If you want to run it on DSMLP as well, please modify it to your username. If you run on the local computer, you should use the path leading to the PDA folder.
 
 # DICE
-TODO
+Use cause-specific data to train interest and conformity embeddings separately. This is a replicated project from [Disentangling User Interest and Conformity for Recommendation with Causal Embedding]([https://arxiv.org/pdf/2105.06067.pdf](https://arxiv.org/abs/2006.11011)https://arxiv.org/abs/2006.11011). 
+
+## Requirement 
+To set up the environment and control package versions, please download [diceEnv.yml](DICE/diceEnv.yml) and create the environment `diceEnv` by entering `conda env create -f diceEnv.yml` in the terminal. \
+Activate `diceEnv` by entering `conda activate diceEnv` (or `source activate diceEnv` for DSMLP terminal).\
+
+Installed packages in `diceEnv`:\
+`conda create -n diceEnv`\
+`source activate diceEnv`\
+`conda install -c dglteam dgl`\
+`pip install absl-py`\
+`pip install visdom`\
+`pip install setproctitle`\
+`pip install Deprecated`\
+`pip install pandas`\
+`pip install torch`\
+`pip install packaging`\
+`pip install faiss`\
+`Conda instal -c condo-forge fairs-gpu`
+
+After version control, you then can run the code in `diceEnv`. (Simply activate the environment by `source activate diceEnv`)
+
+### Command/Reproduce
+Change directory path in (app.py)[DICE/src/app.py] and [const.py](DICE/src/config/const.py). (Direct to DICE folder. For instance, my DSMLP path is  `/home/zgong/private/DICE`.)\
+To train model, run `nohup python app.py --flagfile ./config/nf_dice.cfg >output.txt &`.\
+
