@@ -1,5 +1,5 @@
 # DSC180B-Popularity Bias in Netflix dataset
-
+[report.pdf](https://github.com/bettygong/artifact-directory-template/blob/main/report.pdf)
 ## Dataset Download
 Netflix: The original data is downloaded from Netflix Kaggle competition published on following [original data](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data/)\
 Specific data formats for the two models are written in the data folders.
